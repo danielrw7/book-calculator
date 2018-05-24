@@ -1,0 +1,57 @@
+@font-face {
+    font-family: ArgentCF;
+    src: url("../assets/fonts/argentcf-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ArgentCF;
+    font-style: italic;
+    src: url("../assets/fonts/argentcf-regularitalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ArgentCF;
+    font-weight: bold;
+    src: url("../assets/fonts/argentcf-bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ArgentCF;
+    font-weight: bold;
+    font-style: italic;
+    src: url("../assets/fonts/argentcf-bolditalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ArgentCF-thin;
+    src: url("../assets/fonts/argentcf-thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ArgentCF-light;
+    src: url("../assets/fonts/argentcf-light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ArgentCF-super;
+    src: url("../assets/fonts/argentcf-super.otf") format("opentype");
+}
+
+
+.large {
+    font-family: ArgentCF;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+.regular {
+    font-family: ArgentCF;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.smaller {
+    font-size: 0.8em;
+}

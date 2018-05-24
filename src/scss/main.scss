@@ -1,0 +1,32 @@
+$color-light:      #FFFFFF;
+$color-light-blue: #3e51b5;
+$color-dark-blue:  #1f307e;
+$color-gray:       #ededed;
+$color-red:        #e54e4e;
+
+$column-width: 100% / 12;
+$left-width: $column-width * 2;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $color-gray;
+    display: flex;
+    align-items: center;
+    font-family: ArgentCF-thin;
+    color: $color-light-blue;
+}
+
+body, body * {
+    box-sizing: border-box;
+}
+
+@import "partials/mixins";
+@import "partials/icons";
+@import "partials/fonts";
+@import "partials/layout";
+@import "partials/forms";

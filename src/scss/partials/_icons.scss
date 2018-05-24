@@ -1,0 +1,41 @@
+.icon {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    //border: 1px solid black;
+    box-sizing: content-box;
+
+    &.four {
+        background-image: url(../assets/icons/Books_Four.svg);
+        background-size: 160%;
+        width: 120px;
+        height: 100px;
+    }
+
+    &.full-bottom {
+        background-image: url(../assets/icons/Books_Full_Bottom.svg);
+        width: 200px;
+
+    }
+    &.full-top {
+        background-image: url(../assets/icons/Books_Full_Top.svg);
+        width: 200px;
+    }
+    &.single-red {
+        background-image: url(../assets/icons/Books_Single_Red.svg);
+        width: 40px;
+        background-size: 500%;
+    }
+    &.three {
+        background-image: url(../assets/icons/Books_Three.svg);
+        background-size: 200%;
+    }
+    &.calendar {
+        background-image: url(../assets/icons/Calendar_Icon.svg);
+        background-size: 220%;
+        width: 90px;
+    }
+}

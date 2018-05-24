@@ -1,0 +1,49 @@
+input {
+    font-size: 1em;
+    font-family: inherit;
+    color: $color-light-blue;
+    text-align: center;
+    width: 2.75em;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    padding-bottom: 0.1em;
+    margin: 0.2em auto;
+
+    &[type="number"]::-webkit-inner-spin-button, 
+    &[type="number"]::-webkit-outer-spin-button { 
+        opacity: 0;
+        -webkit-appearance: none;
+    }
+
+}
+
+button {
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+    padding: 0.05em 0.6em 0.1em 0.6em;
+    margin: 0.2em auto;
+    border: 2px solid white;
+    border-radius: 0.4em;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .05);
+    }
+    
+    &:active,
+    &:focus {
+        background-color: rgba(255, 255, 255, .15);
+    }
+
+    &.blue {
+        background-color: $color-light-blue;
+        border: 0px;
+        &.transparent {
+            color: $color-light-blue;
+            border: 1px solid $color-light-blue;
+            background-color: transparent;
+        }
+    }
+}
