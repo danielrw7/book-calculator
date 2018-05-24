@@ -1,6 +1,6 @@
 image: node:9.8.0
 
-pages:
+deploy:
   cache:
     paths:
     - node_modules/
