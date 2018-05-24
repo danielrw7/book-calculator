@@ -6,7 +6,7 @@ pages:
     - node_modules/
 
   script:
-  - yarn install --production
+  - yarn install
   - yarn run build
   artifacts:
     paths:
