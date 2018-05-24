@@ -20,5 +20,6 @@ const routes = [
 ]
 
 export default new VueRouter({
-    routes
+    routes,
+    history: true,
 })
