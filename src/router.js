@@ -13,6 +13,11 @@ const routes = [
         component: Calculate
     },
     {
+        path: '/index.html',
+        name: 'Calculate',
+        component: Calculate
+    },
+    {
         path: '/simple',
         name: 'CalculateSimple',
         component: CalculateSimple
