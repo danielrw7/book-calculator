@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Calculate from './components/Calculate'
-import CalculateSimple from './components/CalculateSimple'
+import Calculate from './pages/Calculate'
+import CalculateSimple from './pages/CalculateSimple'
+import Calendar from './pages/CalendarPage'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
         path: '/calculate',
         name: 'Calculate',
         component: Calculate
+    },
+    {
+        path: '/calendar',
+        name: 'Calendar',
+        component: Calendar
     },
 ]
 
