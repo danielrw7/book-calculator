@@ -24,7 +24,7 @@
                 </span>
                 <span class="icon three"></span>
             </section>
-            <section class="icon-right center">
+            <section class="icon-right center" @click="openPage('Calculate')">
                 <span class="text-small">
                     If I read this much per day, how many books will I read over time?
                 </span>
