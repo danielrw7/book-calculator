@@ -50,7 +50,6 @@ export default {
         tick() {
             if (this.running) {
                 this.stopDate = new Date()
-                this.$forceUpdate()
                 requestAnimationFrame(this.tick)
             }
         }
