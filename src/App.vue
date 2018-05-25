@@ -66,10 +66,9 @@ export default {
     }
 
     @media screen and (max-width: $mobile-break) {
-        flex-direction: column;
+        display: block;
 
         menu, main {
-            flex: 1;
             width: 100%;
             padding-left: 0;
             padding-right: 0;
