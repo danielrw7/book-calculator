@@ -9,18 +9,18 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'Calculate',
-        component: Calculate
+        name: 'CalculateSimple',
+        component: CalculateSimple
     },
     {
         path: '/index.html',
-        name: 'Calculate',
-        component: Calculate
-    },
-    {
-        path: '/simple',
         name: 'CalculateSimple',
         component: CalculateSimple
+    },
+    {
+        path: '/calculate',
+        name: 'Calculate',
+        component: Calculate
     },
 ]
 

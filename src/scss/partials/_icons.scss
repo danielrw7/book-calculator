@@ -10,32 +10,55 @@
 
     &.four {
         background-image: url(../assets/icons/Books_Four.svg);
-        background-size: 160%;
-        width: 120px;
-        height: 100px;
+        background-size: 140%;
+        width: 100px;
+        height: 71px;
     }
-
     &.full-bottom {
         background-image: url(../assets/icons/Books_Full_Bottom.svg);
-        width: 200px;
 
+        $width: 200px;
+        width: $width;
+        height: $width / 2;
     }
     &.full-top {
         background-image: url(../assets/icons/Books_Full_Top.svg);
-        width: 200px;
+
+        $width: 200px;
+        width: $width;
+        height: $width / 2;
     }
-    &.single-red {
+    &.single {
         background-image: url(../assets/icons/Books_Single_Red.svg);
-        width: 40px;
         background-size: 500%;
+        background-position: -67px 1px;
+
+        $width: 35px;
+        width: $width;
+        height: $width * 18 / 7;
     }
     &.three {
         background-image: url(../assets/icons/Books_Three.svg);
         background-size: 200%;
+
+        $width: 100px;
+        width: $width;
+        height: $width;
     }
     &.calendar {
         background-image: url(../assets/icons/Calendar_Icon.svg);
         background-size: 220%;
-        width: 90px;
+
+        $width: 55px;
+        width: $width;
+        height: $width * 49 / 45;
+    }
+    &.hamburger {
+        background-image: url(../assets/icons/hamburger.svg);
+        background-size: 100%;
+
+        $width: 36px;
+        width: $width;
+        height: $width * 4 / 5;
     }
 }

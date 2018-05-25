@@ -11,9 +11,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/settings.scss";
+
 footer {
-    margin-top: 5em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     font-family: ArgentCF;
+
+    @media screen and (max-width: $mobile-break) {
+        margin: 1em;
+    }
 }
 </style>

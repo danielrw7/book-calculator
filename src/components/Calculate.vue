@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="calculate content">
         <p>How long do I need to read every day to meet my goal?</p>
-        <div class="calculate content">
+        <div class="shadow">
             <div class="split">
                 <section class="blue">
                     I want to read

@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="content shadow">
         <section class="blue">
             <span class="thin">
                 If you read just 10 pages per day,
@@ -12,10 +12,23 @@
             <button type="submit" @click="submit">Calculate</button>
         </section>
         <section>
-            This site is dedicated to helping you shchedule and motivate yourself to reach your reading goals. Select a calculation to get started.
+            This site is dedicated to helping you schedule and motivate yourself to reach your reading goals. Select a calculation to get started.
         </section>
     </div>
 </template>
+
+<style lang="scss" scoped>
+@import "../scss/settings.scss";
+
+button {
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+        margin-top: .4em !important;
+        margin-left: 0 !important;
+    }
+}
+</style>
+
 
 <script>
 import { defaults, pagesPerDayToBooks } from '@/calculations'
