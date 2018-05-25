@@ -21,11 +21,9 @@
 @import "../scss/settings.scss";
 
 button {
-    @media screen and (max-width: $mobile-break) {
-        display: block;
-        margin-top: .4em !important;
-        margin-left: 0 !important;
-    }
+    display: block;
+    margin-top: .4em !important;
+    margin-left: 0 !important;
 }
 </style>
 
