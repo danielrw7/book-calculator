@@ -28,13 +28,28 @@
                     <label><input name="wpm" v-model="wordsPerMinute" type="number" min="0" class="wpm" /> Words per minute</label>
                     <!-- <button class="blue transparent">VIEW THE MATH</button> -->
                 </div>
+
+                <modal :open="modalOpen" @close="modalClosed">
+                    <div slot="contents">
+                        math goes here
+                    </div>
+                </modal>
+                <button @click="openModal">VIEW THE MATH</button>
             </section>
         </div>
     </div>
 </template>
 
+<style lang="scss" scoped>
+button {
+    color: blue;
+}
+</style>
+
+
 <script>
 import { defaults, minutesPerDay } from '@/calculations'
+import Modal from '@/components/Modal'
 
 export default {
     name: 'Calculate',
@@ -45,12 +60,25 @@ export default {
             pagesPerBook: defaults.pagesPerBook,
             wordsPerPage: defaults.wordsPerPage,
             wordsPerMinute: defaults.wordsPerMinute,
+
+            modalOpen: false,
         }, this.$route.query)
     },
     computed: {
         result() {
             return minutesPerDay(this)
+        },
+    },
+    methods: {
+        openModal() {
+            this.modalOpen = true
+        },
+        modalClosed() {
+            this.modalOpen = false
         }
+    },
+    components: {
+        Modal,
     },
 }
 </script>
