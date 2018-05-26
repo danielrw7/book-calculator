@@ -1,8 +1,8 @@
 <template>
     <menu :class="{ 'collapsed': collapsed }">
         <div class="sections">
-            <section @click="toggleCollapsed">
-                <span class="icon full-top"></span>
+            <section @click="topMenuClick">
+                <span @click="openPage('CalculateSimple')" class="icon full-top"></span>
                 <span class="toggle-menu">
                     <span>Menu</span>
                     <span class="icon hamburger"></span>
@@ -217,6 +217,15 @@ export default {
             this.$router.push({
                 name
             })
+        },
+        topMenuClick() {
+            // this behavior is different depending on whether the page is past
+            // the mobile breakpoint
+            if (window.innerWidth > 1200) {
+                this.openPage('CalculateSimple') // open the homepage
+            }
+
+            this.toggleCollapsed()
         },
         toggleCollapsed() {
             this.collapsed = window.innerWidth > 1200 || !this.collapsed
