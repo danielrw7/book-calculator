@@ -28,13 +28,13 @@
     position: fixed;
     z-index: 2;
     top: 10%;
-    bottom: 10%;
+    // bottom: 10%;
     left: 10%;
     right: 10%;
 
     @media screen and (max-width: $mobile-break) {
         top: 0;
-        bottom: 0;
+        // bottom: 0;
         left: 0;
         right: 0;
     }
