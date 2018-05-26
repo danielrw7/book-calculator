@@ -219,10 +219,10 @@ export default {
             })
         },
         toggleCollapsed() {
-            this.collapsed = window.outerWidth > 1200 || !this.collapsed
+            this.collapsed = window.innerWidth > 1200 || !this.collapsed
         },
         resize() {
-            const collapsed = this.collapsed || window.outerWidth > 1200
+            const collapsed = this.collapsed || window.innerWidth > 1200
             if (collapsed != this.collapsed) {
                 this.collapsed = collapsed
             }

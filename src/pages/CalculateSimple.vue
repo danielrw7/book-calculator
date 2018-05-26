@@ -6,6 +6,8 @@
             </span>
             <br>
             <span class="large">you would read more books every year than the average American</span>
+            <br>
+            <span class="source">Source: Pew Research Center, March 17-April 12, 2015</span>
         </section>
         <section class="red">
             Read <input name="pages" type="number" min="0" v-model="pagesPerDay" /> pages every day to read <i class="large bold" :title="result">{{ Math.ceil(result) }}</i> books per year.
