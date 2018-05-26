@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <button class="blue">About</button> This site is by <i><b>Hannah Wilson</b></i>, <i><b>Danny Wilson</b></i>, and <i><b>Tom Sanford</b></i>
+        <button class="blue">About</button> This site is by <i><b>Hannah Wilson</b></i>, <i><b>Danny Wilson</b></i>, <i><b>Tom Sanford</b></i>, and <i><b>Sam Weaver</b></i>.
     </footer>
 </template>
 
