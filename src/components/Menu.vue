@@ -8,7 +8,7 @@
                     <span class="icon hamburger"></span>
                 </span>
             </section>
-            <section @click="openPage('CalculateSimple')">
+            <section @click="openPage('CalculateSimple')" :class="classActive('CalculateSimple')">
                 How long do I need to read every day to meet my goal?
             </section>
             <section class="icon-right">
@@ -23,13 +23,13 @@
                 </span>
                 <span class="icon three"></span>
             </section>
-            <section class="icon-right center" @click="openPage('Calculate')">
+            <section class="icon-right center" @click="openPage('Calculate')" :class="classActive('Calculate')">
                 <span class="text-small">
                     If I read this much per day, how many books will I read over time?
                 </span>
                 <span class="icon calendar"></span>
             </section>
-            <section class="icon-right">
+            <section class="icon-right" @click="openPage('CalculateSimple')" :class="classActive('CalculateSimple')">
                 <span class="text-small">
                     How long do I need to read every day to reach my reading goal?
                 </span>
@@ -92,11 +92,11 @@ menu {
 
         transition: background-color 0.5s;
         &:hover, &:focus {
-            background-color: lighten($color-dark-blue, 4%);
+            background-color: lighten($color-dark-blue, 6%);
         }
-        &:active {
+        &:active, &.active {
             transition: background-color 0s;
-            background-color: lighten($color-dark-blue, 2%);
+            background-color: darken($color-dark-blue, 4%);
         }
 
         background-size: auto 75%;
@@ -225,7 +225,12 @@ export default {
             if (collapsed != this.collapsed) {
                 this.collapsed = collapsed
             }
+        },
+        classActive(name) {
+            return {
+                'active': this.$route.name == name
+            }
         }
-    }
+    },
 }
 </script>

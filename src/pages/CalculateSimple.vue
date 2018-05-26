@@ -40,6 +40,7 @@ ol {
     justify-content: space-between;
     color: white;
     padding: 0;
+    margin-bottom: 0;
 
     li {
         @include flex(1);
