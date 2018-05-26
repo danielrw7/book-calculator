@@ -9,12 +9,15 @@ input {
     padding-bottom: 0.1em;
     margin: 0.2em auto;
 
-    &[type="number"]::-webkit-inner-spin-button, 
-    &[type="number"]::-webkit-outer-spin-button { 
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
         opacity: 0;
         @include appearance(none);
     }
 
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
 }
 
 button {
@@ -31,15 +34,16 @@ button {
     transition: background-color 0.5s;
 
     &:hover {
-        background-color: rgba(255, 255, 255, .05);
-    }
-    
-    &:active,
-    &:focus {
-        background-color: rgba(255, 255, 255, .15);
+        background-color: rgba(255, 255, 255, 0.05);
     }
 
-    section.blue &, section.red & {
+    &:active,
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    section.blue &,
+    section.red & {
         border-color: white;
         color: white;
     }
