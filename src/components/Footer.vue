@@ -20,5 +20,9 @@ footer {
     @media screen and (max-width: $mobile-break) {
         margin: 1em;
     }
+
+    button {
+        color: white;
+    }
 }
 </style>

@@ -5,14 +5,30 @@
 /// @param {*} $value - Property value
 /// @param {List} $prefixes (()) - List of prefixes to print
 @mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
- 
-  // Output standard non-prefixed declaration
-  #{$property}: $value;
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
 }
 
-@mixin box-shadow($value) {
-    @include prefix(box-shadow, $value, webkit moz);
+@mixin transform($value) {
+    @include prefix(transform, $value, webkit ms);
+}
+@mixin transform-origin($value) {
+    @include prefix(transform-origin, $value, webkit ms);
+}
+@mixin appearance($value) {
+    @include prefix(appearance, $value, webkit moz);
+}
+
+@mixin flex($value) {
+    @include prefix(flex, $value, webkit webkit-box ms);
+}
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }

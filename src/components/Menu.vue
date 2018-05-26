@@ -48,6 +48,7 @@
 
 <style lang="scss" scoped>
 @import "../scss/settings.scss";
+@import "../scss/partials/mixins";
 
 menu {
     margin: 0;
@@ -104,13 +105,13 @@ menu {
         // background-repeat: no-repeat;
 
         &.icon-right, &.icon-bottom {
-            display: flex;
+            @include display-flex();
             align-items: flex-end;
             padding-right: 0;
             padding-bottom: 0;
 
             span:first-child {
-                flex: 1;
+                @include flex(1);
                 margin: auto;
                 padding-bottom: 1.5rem;
                 padding-right: 0.8rem;
@@ -121,7 +122,7 @@ menu {
             }
 
             .icon {
-                flex: 0 auto;
+                @include flex(0 auto);
             }
 
             &.center {

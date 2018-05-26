@@ -23,9 +23,9 @@ button {
     background-color: transparent;
     padding: 0.05em 0.6em 0.1em 0.6em;
     margin: 0.2em auto;
-    border: 2px solid white;
+    border: 2px solid $color-light-blue;
     border-radius: 0.4em;
-    color: white;
+    color: $color-light-blue;
     cursor: pointer;
 
     &:hover {
@@ -35,6 +35,11 @@ button {
     &:active,
     &:focus {
         background-color: rgba(255, 255, 255, .15);
+    }
+
+    section.blue &, section.red & {
+        border-color: white;
+        color: white;
     }
 
     &.blue {

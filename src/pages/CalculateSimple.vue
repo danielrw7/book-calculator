@@ -27,6 +27,7 @@
 
 <style lang="scss" scoped>
 @import "../scss/settings.scss";
+@import "../scss/partials/mixins";
 
 button {
     display: block;
@@ -35,20 +36,20 @@ button {
 }
 
 ol {
-    display: flex;
+    @include display-flex();
     justify-content: space-between;
     color: white;
     padding: 0;
 
     li {
-        flex: 1;
+        @include flex(1);
         margin-right: 0.5em;
 
         &:last-child {
             margin-right: 0;
         }
 
-        display: flex;
+        @include display-flex();
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
@@ -58,19 +59,19 @@ ol {
             height: 100%;
             margin: auto;
 
-            display: flex;
+            @include display-flex();
             justify-content: center;
             flex-direction: column;
         }
 
         div:first-child {
-            flex: 1;
+            @include flex(1);
             background-color: $color-dark-blue;
             text-align: center;
         }
         div:last-child {
             font-size: 0.75em;
-            flex: 3;
+            @include flex(3);
             background-color: $color-light-blue;
 
             padding: 1.2rem 1.5rem;

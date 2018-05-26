@@ -54,6 +54,7 @@
         background-size: 50%;
         background-position: center center;
         background-repeat: no-repeat;
+        border-width: 0px;
         float: right;
     }
 

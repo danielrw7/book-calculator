@@ -41,9 +41,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "./scss/settings.scss";
+@import "./scss/partials/mixins";
 
 .layout {
-    display: flex;
+    @include display-flex();
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
@@ -53,13 +54,13 @@ export default {
 
     menu {
         order: 0;
-        flex: 1 200px;
+        @include flex(1 200px);
         // min-width: 300px;
         min-height: 100%;
     }
     main {
         order: 1;
-        flex: 10;
+        @include flex(10);
         margin: auto;
 
         padding: 0 percentage(1 / 10);

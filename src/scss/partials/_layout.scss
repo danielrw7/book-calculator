@@ -1,13 +1,6 @@
 .right {
     position: relative;
 
-    // margin-left: #{$left-width + (1 * $column-width)};
-    // margin-left: #{$left-width + (-0.5 * $column-width)};
-    // width: #{100% - $left-width - (2 * $column-width)};
-    // width: #{100% - $left-width - (1 * $column-width)};
-
-    // background-color: $color-light-blue;
-
     p {
         font-size: 1.75em;
         font-family: ArgentCF;
@@ -17,7 +10,7 @@
 
     .shadow {
         background-color: white;
-        @include box-shadow(0px 0px 2em -0.75em rgba(0, 0, 0, 0.75));
+        box-shadow: 0px 0px 2em -0.75em rgba(#000000, 0.75);
     }
 
     > .content {
@@ -68,7 +61,7 @@
         }
 
         .split {
-            display: flex;
+            @include display-flex();
             justify-content: flex-start;
             flex-direction: row;
 
@@ -82,7 +75,7 @@
 
             section {
                 margin: 0;
-                flex: 1;
+                @include flex(1);
                 width: 100%;
                 padding-top: 2em;
                 padding-bottom: 2em;
@@ -90,7 +83,7 @@
                 float: left;
                 position: relative;
 
-                display: flex;
+                @include display-flex();
                 justify-content: center;
                 flex-direction: column;
 
@@ -120,28 +113,16 @@
     
                     $angle: 25deg;
                     .top {
-                        -webkit-transform: skewX($angle);
-                        -webkit-transform-origin:top;
+                        @include transform(skewX($angle));
+                        @include transform-origin(top);
                     }
                     .bottom {
-                        -webkit-transform: skewX(-1 * $angle);
-                        -webkit-transform-origin:bottom;
+                        @include transform(skewX(-1 * $angle));
+                        @include transform-origin(bottom);
                         height: calc(50% - 1px);
                     }
                 }
 
-                // .triangle {
-                //     position: absolute;
-                //     left: 0;
-                //     top: 0;
-
-                //     width: 0;
-                //     height: 0;
-                //     border-style: solid;
-                //     // border-width: 180px 0 180px 80px;
-                //     border-color: transparent transparent transparent $color-light-blue;
-                    
-                // }
                 @media screen and (min-width: $mobile-break) {
                     .triangle + * {
                         padding-left: 2em;
@@ -154,7 +135,7 @@
 
     @media screen and (max-width: $mobile-break) {
         .shadow {
-            @include box-shadow(none);
+            box-shadow: none;
         }
 
         .content {
