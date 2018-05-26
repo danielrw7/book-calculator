@@ -55,3 +55,10 @@
 .smaller {
     font-size: 0.8em;
 }
+
+.source {
+    font-size: 0.45em;
+    color: lighten($color-light-blue, 15%);
+    // float: right;
+    font-family: sans-serif;
+}
