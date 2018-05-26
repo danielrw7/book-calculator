@@ -2,8 +2,7 @@
     <menu :class="{ 'collapsed': collapsed }">
         <div class="sections">
             <section @click="toggleCollapsed">
-                <!-- <span class="icon full-top"></span> -->
-                Top shelf icon goes here
+                <span class="icon full-top"></span>
                 <span class="toggle-menu">
                     <span>Menu</span>
                     <span class="icon hamburger"></span>
@@ -40,7 +39,7 @@
                 <span>
                     All Calculations
                 </span>
-                <!-- <span class="icon full-bottom"></span> -->
+                <span class="icon full-bottom"></span>
             </section>
         </div>
     </menu>
@@ -77,6 +76,7 @@ menu {
         
         section:first-of-type {
             border-top-width: 0px;
+            padding-bottom: 0;
         }
     }
 
@@ -90,19 +90,16 @@ menu {
 
         cursor: pointer;
 
+        transition: background-color 0.5s;
         &:hover, &:focus {
             background-color: lighten($color-dark-blue, 4%);
         }
         &:active {
+            transition: background-color 0s;
             background-color: lighten($color-dark-blue, 2%);
         }
 
         background-size: auto 75%;
-        // background-attachment: fixed;
-        // background-color: transparent;
-        // background-image: url("../assets/icons/Books_Four.svg");
-        // background-position: right bottom;
-        // background-repeat: no-repeat;
 
         &.icon-right, &.icon-bottom {
             @include display-flex();

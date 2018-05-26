@@ -17,16 +17,25 @@
     &.full-bottom {
         background-image: url(../assets/icons/Books_Full_Bottom.svg);
 
-        $width: 200px;
-        width: $width;
-        height: $width / 2;
+        width: 263px;
+        height: 75px;
+        margin: auto;
+        margin-top: -46px;
     }
     &.full-top {
         background-image: url(../assets/icons/Books_Full_Top.svg);
 
-        $width: 200px;
+        $width: 240px;
         width: $width;
-        height: $width / 2;
+        height: $width / 3;
+        max-height: 100%;
+        margin-bottom: -6px;
+
+        @media screen and (max-width: $mobile-break) {
+            $width: 165px;
+            width: $width;
+            height: $width / 3;
+        }
     }
     &.single {
         background-image: url(../assets/icons/Books_Single_Red.svg);
@@ -41,7 +50,7 @@
         background-image: url(../assets/icons/Books_Three.svg);
         background-size: 200%;
 
-        $width: 100px;
+        $width: 75px;
         width: $width;
         height: $width;
     }

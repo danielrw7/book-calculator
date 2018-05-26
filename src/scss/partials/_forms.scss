@@ -12,7 +12,7 @@ input {
     &[type="number"]::-webkit-inner-spin-button, 
     &[type="number"]::-webkit-outer-spin-button { 
         opacity: 0;
-        -webkit-appearance: none;
+        @include appearance(none);
     }
 
 }
@@ -27,6 +27,8 @@ button {
     border-radius: 0.4em;
     color: $color-light-blue;
     cursor: pointer;
+
+    transition: background-color 0.5s;
 
     &:hover {
         background-color: rgba(255, 255, 255, .05);
