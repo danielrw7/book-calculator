@@ -69,6 +69,11 @@ ol {
             @include flex(1);
             background-color: $color-dark-blue;
             text-align: center;
+
+            @media screen and (max-width: $mobile-break) {
+                text-align: left;
+                padding-left: 1.5rem;
+            }
         }
         div:last-child {
             font-size: 0.75em;
