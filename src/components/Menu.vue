@@ -213,6 +213,7 @@ export default {
     },
     methods: {
         openPage(name) {
+            this.toggleCollapsed()
             this.$router.push({
                 name
             })

@@ -7,9 +7,7 @@
                     <div>
                         I want to read
                         <input name="books" v-model="numBooks" type="number" min="0" class="books" />
-                        books
-                        <br>
-                        in
+                        books in
                         <input name="days" v-model="numDays" type="number" min="0" class="days" />
                         days.
                     </div>
