@@ -34,7 +34,19 @@
 
                 <modal :open="modalOpen" @close="modalClosed">
                     <div slot="contents">
-                        math goes here
+                        <div class="innerModal">
+                            <p class="smaller">The Math: How long do I need to read every day to meet my goal?</p>
+                            <!-- https://viereck.ch/latex-to-svg/ -->
+                            <img src="../assets/equation.svg" alt="The equation" class="equation-image"/>
+                            <ol>
+                                <li><div><span>W = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                                <li><div><span>X = minutes per day</span>This may determine on how many things happen that determine the value for Y. This may depend on how things happen.</div></li>
+                                <li><div><span>Z = books every time</span>This may depend on how things happen.</div></li>
+                                <li><div><span>A = times you read</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                                <li><div><span>B = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                                <li><div><span>C = pages per book</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                            </ol>
+                        </div>
                     </div>
                 </modal>
                 <button @click="openModal">VIEW THE MATH</button>
@@ -44,10 +56,89 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../scss/settings.scss";
+@import "../scss/partials/mixins";
+
 button {
     font-family: sans-serif;
     font-size: .8em;
     padding: .2em .8em;
+}
+
+.equation-image {
+    width: 60%;
+
+    @media screen and (max-width: $mobile-break) {
+        width: 100%;
+    }
+}
+
+ol {
+    @include display-flex();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    padding: 0;
+    margin-bottom: 0;
+
+    li {
+        @include flex(1);
+        // margin-right: 0.5em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include display-flex();
+        flex-direction: row;
+        flex-basis: 50%;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+
+        font-size: 0.8em;
+
+        div {
+            height: 100%;
+            margin: auto;
+
+            @include display-flex();
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        div:last-child {
+            font-size: 0.75em;
+            @include flex(3);
+            background-color: $color-light-blue;
+
+            padding: 1.2rem 1.5rem;
+            position: relative;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+
+        li {
+            display: block;
+            margin-right: 0;
+            // padding-bottom: 0.75em;
+        }
+    }
+}
+
+</style>
+
+<style lang="scss">
+// Note that this block is unscoped... it won't apply to the modal component if not
+.innerModal {
+    padding: 0.75rem 4rem;
 }
 </style>
 
