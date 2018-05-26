@@ -4,16 +4,21 @@
         <div class="shadow">
             <div class="split">
                 <section class="blue">
-                    I want to read
-                    <input name="books" v-model="numBooks" type="number" min="0" class="books" />
-                    books
-                    <br>
-                    in
-                    <input name="days" v-model="numDays" type="number" min="0" class="days" />
-                    days.
+                    <div>
+                        I want to read
+                        <input name="books" v-model="numBooks" type="number" min="0" class="books" />
+                        books
+                        <br>
+                        in
+                        <input name="days" v-model="numDays" type="number" min="0" class="days" />
+                        days.
+                    </div>
                 </section>
                 <section class="red calculate-simple" id="num-books">
-                    <div class="triangle"></div>
+                    <div class="triangle">
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
                     <div>
                         Read <i class="result large bold" :title="result">{{ Math.ceil(result) }}</i> <span class="plural">minutes</span> per day to complete your goal.
                     </div>
@@ -42,10 +47,11 @@
 
 <style lang="scss" scoped>
 button {
-    color: blue;
+    font-family: sans-serif;
+    font-size: .8em;
+    padding: .2em .8em;
 }
 </style>
-
 
 <script>
 import { defaults, minutesPerDay } from '@/calculations'
