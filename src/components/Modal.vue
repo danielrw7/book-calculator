@@ -15,7 +15,7 @@
 @import "../scss/partials/mixins";
 
 .overlay {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba($color-dark-blue, .7);
     position: fixed;
     top: 0;
     bottom: 0;
