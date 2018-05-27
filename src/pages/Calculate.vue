@@ -137,9 +137,9 @@ ol {
 
 <style lang="scss">
 // Note that this block is unscoped... it won't apply to the modal component if not
-.innerModal {
-    padding: 0.75rem 4rem;
-}
+// .innerModal {
+//     padding: 0.75rem 4rem;
+// }
 </style>
 
 <script>

@@ -15,7 +15,11 @@ body {
 body, body * {
     box-sizing: border-box;
 }
-
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 @import "partials/mixins";
 @import "partials/icons";

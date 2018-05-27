@@ -1,6 +1,6 @@
 <template>
     <div v-if="open">
-        <div class="overlay" @click="close"></div>
+            <div class="overlay" @click="close"></div>
         <div class="modal">
             <button class="close" @click="close"></button>
             <div class="content">
@@ -28,13 +28,14 @@
     position: fixed;
     z-index: 2;
     top: 10%;
-    // bottom: 10%;
+    bottom: 10%;
     left: 10%;
     right: 10%;
+    // overflow: hidden;
 
     @media screen and (max-width: $mobile-break) {
         top: 0;
-        // bottom: 0;
+        bottom: 0;
         left: 0;
         right: 0;
     }
@@ -42,10 +43,17 @@
     background-color: white;
     padding: 1rem;
 
+    $close-width: 40px;
+
     .close {
+
+        position: absolute;
+        top: 1rem;
+        right: 40px;
+
         color: white;
-        width: 40px;
-        height: 40px;
+        width: $close-width;
+        height: $close-width;
         padding: 0;
         margin: 0;
         border-radius: 40px;
@@ -55,16 +63,17 @@
         background-position: center center;
         background-repeat: no-repeat;
         border-width: 0px;
-        float: right;
     }
 
     .content {
-        padding-top: 2rem;
+        height: 100%;
+        padding-top: $close-width;
+        padding-right: $close-width + 25px;
+
+        overflow: auto;
         height: 100%;
     }
 }
-
-
 </style>
 
 <script>
