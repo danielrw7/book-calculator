@@ -54,7 +54,7 @@ menu {
     padding: 0;
 
     /*float: left;*/
-    font-size: 1.5rem;
+    font-size: 1.8em;
     font-family: ArgentCF-light;
     color: white;
     text-align: center;
