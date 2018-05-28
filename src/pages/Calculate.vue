@@ -19,6 +19,11 @@
                     </div>
                     <div>
                         Read <i class="result large bold" :title="result">{{ Math.ceil(result) }}</i> <span class="plural">minutes</span> per day to complete your goal.
+                        <br /><br />
+
+                        <button @click="openModal('save')">
+                            SAVE RESULTS AS IMAGE
+                        </button>
                     </div>
                 </section>
                 <div style="clear: both"></div>
@@ -32,26 +37,41 @@
                     <!-- <button class="blue transparent">VIEW THE MATH</button> -->
                 </div>
 
-                <modal :open="modalOpen" @close="modalClosed">
-                    <div slot="contents">
-                        <div class="innerModal">
-                            <p class="smaller">The Math: How long do I need to read every day to meet my goal?</p>
-                            <!-- https://viereck.ch/latex-to-svg/ -->
-                            <img src="../assets/equation.svg" alt="The equation" class="equation-image"/>
-                            <ol>
-                                <li><div><span>W = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
-                                <li><div><span>X = minutes per day</span>This may determine on how many things happen that determine the value for Y. This may depend on how things happen.</div></li>
-                                <li><div><span>Z = books every time</span>This may depend on how things happen.</div></li>
-                                <li><div><span>A = times you read</span>This may determine on how many things happen that determine the value for Y.</div></li>
-                                <li><div><span>B = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
-                                <li><div><span>C = pages per book</span>This may determine on how many things happen that determine the value for Y.</div></li>
-                            </ol>
-                        </div>
-                    </div>
-                </modal>
-                <button @click="openModal">VIEW THE MATH</button>
+                <button @click="openModal('math')">
+                    VIEW THE MATH
+                </button>
             </section>
         </div>
+
+        <modal :open="modal == 'math'" @close="modalClosed">
+            <div slot="contents">
+                <div class="innerModal">
+                    <p class="smaller">The Math: How long do I need to read every day to meet my goal?</p>
+                    <!-- https://viereck.ch/latex-to-svg/ -->
+                    <img src="../assets/equation.svg" alt="The equation" class="equation-image"/>
+                    <ol>
+                        <li><div><span>W = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                        <li><div><span>X = minutes per day</span>This may determine on how many things happen that determine the value for Y. This may depend on how things happen.</div></li>
+                        <li><div><span>Z = books every time</span>This may depend on how things happen.</div></li>
+                        <li><div><span>A = times you read</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                        <li><div><span>B = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                        <li><div><span>C = pages per book</span>This may determine on how many things happen that determine the value for Y.</div></li>
+                    </ol>
+                </div>
+            </div>
+        </modal>
+
+        <modal :open="modal == 'save'" @close="modalClosed">
+            <p slot="contents" class="innerModal">
+                <SaveResults
+                    :numBooks="numBooks"
+                    :numDays="numDays"
+                    :pagesPerBook="pagesPerBook"
+                    :wordsPerPage="wordsPerPage"
+                    :wordsPerMinute="wordsPerMinute"
+                    />
+            </p>
+        </modal>
     </div>
 </template>
 
@@ -145,6 +165,7 @@ ol {
 <script>
 import { defaults, minutesPerDay } from '@/calculations'
 import Modal from '@/components/Modal'
+import SaveResults from '@/components/SaveResults'
 
 export default {
     name: 'Calculate',
@@ -156,7 +177,7 @@ export default {
             wordsPerPage: defaults.wordsPerPage,
             wordsPerMinute: defaults.wordsPerMinute,
 
-            modalOpen: false,
+            modal: false,
         }, this.$route.query)
     },
     computed: {
@@ -165,15 +186,19 @@ export default {
         },
     },
     methods: {
-        openModal() {
-            this.modalOpen = true
+        openModal(name) {
+            this.modal = name
         },
         modalClosed() {
-            this.modalOpen = false
+            this.modal = false
+        },
+        saveResults() {
+
         }
     },
     components: {
         Modal,
+        SaveResults,
     },
 }
 </script>
