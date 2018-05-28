@@ -32,6 +32,12 @@
 @import "../scss/settings.scss";
 @import "../scss/partials/mixins";
 
+img {
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 </style>
 
 <script>
@@ -81,7 +87,7 @@ export default {
                   height = 750,
                   border = 20,
                   paddingTop = 50;
-            console.log(this.$refs.output.innerHTML)
+
             htmlToCanvas(`
                 <div class="main" xmlns="http://www.w3.org/1999/xhtml">
                     ${this.$refs.output.innerHTML}
@@ -138,31 +144,32 @@ export default {
             `, width, height).then(canvas => {
                 let ctx = canvas.getContext('2d')
 
-
                 const image = new Image()
+                image.onload = () => {
+                    const imageWidth = (width - border * 2) * 2 / 3
+                    const imageHeight = imageWidth / 3
+                    image.width = imageWidth
+    
+                    const topOffsetX = (width - imageWidth) / 2
+                    const topOffsetY = (height - border * 4 - paddingTop * 3) / 3 - imageHeight + border + paddingTop - 2
+                    ctx.drawImage(image, topOffsetX, topOffsetY, imageWidth, imageHeight)
+    
+                    const bottomOffsetY = height - border - imageHeight
+    
+                    const bottomLeftOffsetX = -294
+                    ctx.drawImage(image, bottomLeftOffsetX, bottomOffsetY, imageWidth, imageHeight)
+    
+                    const bottomRightOffsetX = width - border - 133
+                    ctx.drawImage(image, bottomRightOffsetX, bottomOffsetY, imageWidth, imageHeight)
+    
+                    ctx = canvas.getContext('2d')
+                    ctx.fillStyle = colorLightBlue
+                    ctx.fillRect(0, 0, 20, height)
+                    ctx.fillRect(width - 20, 0, 20, height)
+                    this.imgSrc = canvas.toDataURL('image/png')
+                }
+
                 image.src = imageSrc
-                
-                const imageWidth = (width - border * 2) * 2 / 3
-                const imageHeight = imageWidth / 3
-
-                const topOffsetX = (width - imageWidth) / 2
-                const topOffsetY = (height - border * 4 - paddingTop * 3) / 3 - imageHeight + border + paddingTop - 2
-                ctx.drawImage(image, topOffsetX, topOffsetY, imageWidth, imageHeight)
-
-                const bottomOffsetY = height - border - imageHeight
-
-                const bottomLeftOffsetX = -294
-                ctx.drawImage(image, bottomLeftOffsetX, bottomOffsetY, imageWidth, imageHeight)
-
-                const bottomRightOffsetX = width - border - 133
-                ctx.drawImage(image, bottomRightOffsetX, bottomOffsetY, imageWidth, imageHeight)
-
-                ctx = canvas.getContext('2d')
-                ctx.fillStyle = colorLightBlue
-                ctx.fillRect(0, 0, 20, height)
-                ctx.fillRect(width - 20, 0, 20, height)
-
-                this.imgSrc = canvas.toDataURL('image/png')
             })
         }
     },

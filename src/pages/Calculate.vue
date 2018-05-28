@@ -64,8 +64,8 @@
         <modal :open="modal == 'save'" @close="modalClosed">
             <p slot="contents" class="innerModal">
                 <SaveResults
-                    :numBooks="numBooks"
-                    :numDays="numDays"
+                    :numBooks="parseInt(numBooks)"
+                    :numDays="parseInt(numDays)"
                     :pagesPerBook="pagesPerBook"
                     :wordsPerPage="wordsPerPage"
                     :wordsPerMinute="wordsPerMinute"

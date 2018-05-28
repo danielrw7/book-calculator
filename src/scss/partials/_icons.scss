@@ -30,6 +30,7 @@
         height: $width / 3;
         max-height: 100%;
         margin-bottom: -6px;
+        background-size: 100%;
 
         @media screen and (max-width: $mobile-break) {
             $width: 165px;
