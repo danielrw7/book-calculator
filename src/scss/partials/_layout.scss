@@ -101,7 +101,7 @@
                     z-index: 0;
                     top: 0;
                     bottom: 0;
-                    left: -30%;
+                    left: -33%;
                     right: calc(100% + -1px);
                     
                     .top, .bottom {
@@ -133,7 +133,7 @@
                             // display: inline-block;
                             position: absolute;
                             background: $color-light-blue;
-                            width: 50%;
+                            width: calc(50% + 0.5px);
                             height: 100%;
                             margin-top: 0;
                         }
@@ -141,7 +141,7 @@
                         .top {
                             @include transform(skewY(-1 * $angle));
                             @include transform-origin(right);
-                            margin-left: 50%;
+                            margin-left: calc(50% - 0.5px);
                         }
                         .bottom {
                             @include transform(skewY($angle));
