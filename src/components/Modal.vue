@@ -68,7 +68,7 @@
     .content {
         height: 100%;
         padding-top: $close-width;
-        padding-right: $close-width + 25px;
+        padding-right: 25px;
 
         overflow: auto;
         height: 100%;
