@@ -1,6 +1,11 @@
 <template>
     <footer>
-        <button class="blue">About</button> This site is by <i><b>Hannah Wilson</b></i>, <i><b>Danny Wilson</b></i>, <i><b>Tom Sanford</b></i>, and <i><b>Sam Weaver</b></i>.
+        <button class="blue">About</button>
+        This site is by
+        <a target="_blank" href="https://github.com/hananiah42">Hannah Wilson</a>,
+        <a target="_blank" href="https://github.com/danielrw7">Danny Wilson</a>,
+        <a target="_blank" href="https://github.com/TomAwezome">Tom Sanford</a>,
+        and <a target="_blank" href="https://github.com/weaversam8">Sam Weaver</a>.
     </footer>
 </template>
 
@@ -23,6 +28,19 @@ footer {
 
     button {
         color: white;
+    }
+
+    a {
+        font-style: italic;
+        font-weight: bold;
+
+        &:not(:hover) {
+            text-decoration: none;
+        }
+
+        &:visited {
+            color: inherit;
+        }
     }
 }
 </style>
