@@ -57,6 +57,7 @@ ol {
         justify-content: center;
         align-items: flex-start;
         flex-wrap: nowrap;
+        position: relative;
 
         div {
             height: 100%;
@@ -83,7 +84,6 @@ ol {
             background-color: $color-light-blue;
 
             padding: 1.2rem 1.5rem;
-            position: relative;
         }
 
         span {
@@ -100,7 +100,7 @@ ol {
         li {
             display: block;
             margin-right: 0;
-            padding-bottom: 0.75em;
+            margin-bottom: 0.75em;
         }
     }
 }
