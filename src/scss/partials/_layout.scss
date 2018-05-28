@@ -62,6 +62,7 @@
             @include display-flex();
             justify-content: flex-start;
             flex-direction: row;
+            overflow: hidden;
 
             @media screen and (max-width: $mobile-break) {
                 display: block;
@@ -69,6 +70,9 @@
 
             section:first-child {
                 z-index: 1;
+                @media screen and (max-width: $mobile-break) {
+                    padding-bottom: 0;
+                }
             }
 
             section {
@@ -98,7 +102,7 @@
                     top: 0;
                     bottom: 0;
                     left: -30%;
-                    right: 100%;
+                    right: calc(100% + -1px);
                     
                     .top, .bottom {
                         background: $color-light-blue;
@@ -114,12 +118,12 @@
                     .bottom {
                         @include transform(skewX(-1 * $angle));
                         @include transform-origin(bottom);
-                        height: calc(50% - 1px);
+                        height: 50%;
                     }
 
                     @media screen and (max-width: $mobile-break) {
                         $angle: 10deg;
-                        top: -53%;
+                        top: -66%;
                         bottom: 100%;
                         left: 0;
                         right: 0;
@@ -151,7 +155,7 @@
                 }
                 @media screen and (max-width: $mobile-break) {
                     .triangle + * {
-                        padding-top: 2em;
+                        padding-top: 2.5em;
                     }
                 }
             }
