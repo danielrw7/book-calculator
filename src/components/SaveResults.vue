@@ -1,6 +1,5 @@
 <template>
     <div class="results">
-        Save your results!
         <div ref="output" style="display: none;">
             <div class="top border-bottom">
             </div>
@@ -22,7 +21,6 @@
                 <div class="url">readingcalculator.com</div>
             </div>
         </div>
-        <hr>
         <a :href="imgSrc" :download="filename">Download</a><br>
         <img ref="img" :src="imgSrc" width="750" height="750" />
     </div>

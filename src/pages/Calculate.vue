@@ -43,10 +43,10 @@
             </section>
         </div>
 
-        <modal :open="modal == 'math'" @close="modalClosed">
+        <modal :open="modal == 'math'" @close="modalClosed" title="The Math: How long do I need to read every day to meet my goal?">
             <div slot="contents">
-                <div class="innerModal">
-                    <p class="smaller">The Math: How long do I need to read every day to meet my goal?</p>
+                <!-- <div class="innerModal"> -->
+                    <!-- <p class="smaller"></p> -->
                     <!-- https://viereck.ch/latex-to-svg/ -->
                     <img src="../assets/equation.svg" alt="The equation" class="equation-image"/>
                     <ol>
@@ -57,12 +57,12 @@
                         <li><div><span>B = hours per day</span>This may determine on how many things happen that determine the value for Y.</div></li>
                         <li><div><span>C = pages per book</span>This may determine on how many things happen that determine the value for Y.</div></li>
                     </ol>
-                </div>
+                <!-- </div> -->
             </div>
         </modal>
 
-        <modal :open="modal == 'save'" @close="modalClosed">
-            <p slot="contents" class="innerModal">
+        <modal :open="modal == 'save'" @close="modalClosed" title="Save and share your results!">
+            <div slot="contents">
                 <SaveResults
                     :numBooks="parseInt(numBooks)"
                     :numDays="parseInt(numDays)"
@@ -70,7 +70,7 @@
                     :wordsPerPage="wordsPerPage"
                     :wordsPerMinute="wordsPerMinute"
                     />
-            </p>
+            </div>
         </modal>
     </div>
 </template>

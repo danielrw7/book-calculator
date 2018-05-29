@@ -1,7 +1,12 @@
 <template>
     <div v-if="open">
-            <div class="overlay" @click="close"></div>
+        <div class="overlay" @click="close"></div>
         <div class="modal">
+            <slot name="title">
+                <div class="title" :title="title">
+                    {{ title }}
+                </div>
+            </slot>
             <button class="close" @click="close"></button>
             <div class="content">
                 <slot name="contents"></slot>
@@ -45,18 +50,31 @@
 
     $close-width: 40px;
 
-    .close {
-
+    .title {
+        height: $close-width + 5px;
+        font-size: 2em;
+        width: calc(100% - 49px);
+        padding-right: calc(#{$close-width + 25px} - 1rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         position: absolute;
+        z-index: 1;
+        background-color: inherit;
+    }
+
+    .close {
+        position: absolute;
+        z-index: 1;
         top: 1rem;
-        right: 40px;
+        right: $close-width;
 
         color: white;
         width: $close-width;
         height: $close-width;
         padding: 0;
         margin: 0;
-        border-radius: 40px;
+        border-radius: $close-width;
         background-color: $color-red;
         background-image: url("../assets/icons/x.svg");
         background-size: 50%;
@@ -67,11 +85,13 @@
 
     .content {
         height: 100%;
-        padding-top: $close-width;
-        padding-right: 25px;
+        // padding-right: 25px;
+        padding-top: $close-width + 5px;
 
-        overflow: auto;
+        overflow-y: scroll;
+        overflow-x: auto;
         height: 100%;
+        font-size: 2rem;
     }
 }
 </style>
@@ -83,6 +103,9 @@ export default {
         open: {
             type: Boolean,
             default: false
+        },
+        title: {
+            type: String,
         }
     },
     data() {
