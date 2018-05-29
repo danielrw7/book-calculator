@@ -40,8 +40,8 @@ export default [
         profile: samProfile,
         desc: `Sam is an entrepreneur and a software engineer attending North Carolina State University in Raleigh, North Carolina. His home town is Wilmington, North Carolina. He is passionate about improving education. He built robots competitively during his time in high school, and continues to volunteer with FIRST for 5 weeks each spring. Some of his favorite entertainment includes video gaming, Wes Anderson movies, and contra dancing.`,
         link: {
-            label: `Sam's Github`,
-            href: 'https://github.com/weaversam8',
+            label: `Sam's Website`,
+            href: 'http://samweaver.com',
         },
     },
 ]
