@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <button class="blue">About</button>
+        <button class="blue" @click="$router.push({ name: 'About' })">About</button>
         This site is by
         <a target="_blank" href="https://github.com/hananiah42">Hannah Wilson</a>,
         <a target="_blank" href="https://github.com/danielrw7">Danny Wilson</a>,
@@ -11,7 +11,14 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    methods: {
+        gotoAbout() {
+            this.$router.push({
+                name: ''
+            })
+        }
+    }
 }
 </script>
 
@@ -20,6 +27,7 @@ export default {
 
 footer {
     margin: 1em 0;
+    font-size: 1.15em;
     font-family: ArgentCF;
 
     @media screen and (max-width: $mobile-break) {
@@ -28,6 +36,10 @@ footer {
 
     button {
         color: white;
+        font-weight: normal;
+        padding: 0.4em 1.2em 0.5em 1.2em;
+        margin-right: 1em;
+        border-radius: 1em;
     }
 
     a {

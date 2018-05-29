@@ -1,4 +1,4 @@
-input {
+input, textarea {
     font-size: 1em;
     font-family: inherit;
     color: $color-light-blue;
@@ -8,6 +8,7 @@ input {
     border-radius: 3px;
     padding-bottom: 0.1em;
     margin: 0.2em auto;
+    resize: none;
 
     &[type="number"]::-webkit-inner-spin-button,
     &[type="number"]::-webkit-outer-spin-button {
@@ -18,6 +19,18 @@ input {
     &[type="number"] {
         -moz-appearance: textfield;
     }
+
+    &.blue {
+        color: white;
+        background-color: $color-light-blue;
+        outline: none;
+        border-width: 0;
+    }
+}
+
+textarea {
+    width: 100%;
+    text-align: left;
 }
 
 button {
@@ -49,11 +62,23 @@ button {
     }
 
     &.blue {
+        color: white;
         background-color: $color-light-blue;
         border: 0px;
         &.transparent {
             color: $color-light-blue;
             border: 1px solid $color-light-blue;
+            background-color: transparent;
+        }
+    }
+
+    &.red {
+        color: white;
+        background-color: $color-red;
+        border: 0px;
+        &.transparent {
+            color: $color-red;
+            border: 1px solid $color-red;
             background-color: transparent;
         }
     }

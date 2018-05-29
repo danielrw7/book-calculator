@@ -5,6 +5,7 @@ import Calculate from './pages/Calculate'
 import CalculateSimple from './pages/CalculateSimple'
 import Calendar from './pages/CalendarPage'
 import ReadingSpeed from './pages/ReadingSpeed'
+import About from './pages/About'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
         path: '/reading-speed',
         name: 'ReadingSpeed',
         component: ReadingSpeed
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: About
     },
 ]
 
