@@ -140,7 +140,7 @@ ol {
         .name {
             font-family: ArgentCF;
             background-color: $color-dark-blue;
-            font-size: 0.9em;
+            font-size: 0.8em;
             .job {
                 font-size: 0.7em;
                 font-style: italic;
