@@ -1,4 +1,4 @@
-
+import hannahProfile from '@/assets/profiles/hannah.jpg'
 import dannyProfile from '@/assets/profiles/danny.jpg'
 import tomProfile from '@/assets/profiles/tom.png'
 import samProfile from '@/assets/profiles/sam.jpg'
@@ -6,12 +6,12 @@ import samProfile from '@/assets/profiles/sam.jpg'
 export default [
     {
         name: 'Hannah Wilson',
-        job: 'Concept & Design',
-        profile: 'https://ca.slack-edge.com/T03QE1CDH-U03QG0LEA-f3341696217f-512',
-        desc: `It has not yet been scientifically determined if Hananiah Wilson is composed of atoms or pixels at a fundamental level. Whatever the case, she feels a strong affinity for the for the world inside her computer.`,
+        job: 'Designer Queen',
+        profile: hannahProfile,
+        desc: `Hananiah Wilson is composed of pixels* at a fundamental level. (*This has not yet been determined scientifically.) She feels a strong affinity for the world inside her computer. She manipulates pixels and tells developers what to do for money</a>. When not attached to a computer, you will find her <a href="https://www.goodreads.com/hananiah" target="_blank">attached to a book</a>, singing along with symphonic metal, plotting her future sci-fi novels, and attempting epic ninja-kicks during soccer games.`,
         link: {
-            label: `Hannah's Goodreads`,
-            href: 'https://www.goodreads.com/user/show/51163569-hananiah',
+            label: `Hannah's Website`,
+            href: 'http://hananiahwilson.com/',
         },
     },
     {

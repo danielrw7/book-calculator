@@ -56,6 +56,10 @@ p {
     font-weight: bold;
 }
 
+.sans-serif {
+    font-family: $sans-serif;
+}
+
 .smaller {
     font-size: 0.8em;
 }
@@ -64,5 +68,5 @@ p {
     font-size: 0.45em;
     color: lighten($color-light-blue, 15%);
     // float: right;
-    font-family: sans-serif;
+    font-family: $sans-serif;
 }

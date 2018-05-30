@@ -80,7 +80,7 @@
 @import "../scss/partials/mixins";
 
 button {
-    font-family: sans-serif;
+    font-family: $sans-serif;
     font-size: .8em;
     padding: .2em .8em;
 }

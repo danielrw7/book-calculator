@@ -9,20 +9,16 @@
             <button type="submit" @click="openModal('message')">Send Message</button>
         </section>
         <section>
-            <ol class="contributors clearfix">
+            <ol class="contributors clearfix test">
                 <li v-for="(contributor, i) in contributors" :key="i">
                     <div class="profile">
                         <img :src="contributor.profile" />
                     </div>
                     <div class="name">
                         {{ contributor.name }}
-                        <div class="job">
-                            {{ contributor.job }}
-                        </div>
+                        <div class="job" v-html="contributor.job"></div>
                     </div>
-                    <div class="desc">
-                        {{ contributor.desc }}
-                    </div>
+                    <div class="desc" v-html="contributor.desc"></div>
                     <div class="link">
                         <button class="blue" @click="openLink(contributor.link.href)">
                             {{ contributor.link.label }}
@@ -69,7 +65,7 @@
         // font-size: 1.5em;
         width: 49%;
         display: inline-block;
-        font-family: sans-serif;
+        font-family: $sans-serif;
 
         input, textarea {
             font-family: ArgentCF-light;
@@ -161,8 +157,8 @@ ol {
             }
         }
         .desc {
+            font-family: $sans-serif;
             font-size: 0.5em;
-
         }
 
         .link {
@@ -171,6 +167,7 @@ ol {
             bottom: 0;
             font-size: 0.5em;
             text-align: center;
+            font-family: $sans-serif;
             button {
                 padding: 0.4em 1.2em 0.5em 1.2em;
                 border: 1px solid white;
@@ -180,7 +177,16 @@ ol {
     }
 }
 
+
 </style>
+
+<style lang="scss">
+.contributors .desc a {
+    // Scoped CSS does not work with elements when `v-html` is used
+    color: inherit;
+}
+</style>
+
 
 <script>
 import Modal from '@/components/Modal'
