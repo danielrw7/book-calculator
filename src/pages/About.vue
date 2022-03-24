@@ -187,7 +187,6 @@ ol {
 }
 </style>
 
-
 <script>
 import Modal from '@/components/Modal'
 import contributors from '@/contributors'

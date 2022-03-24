@@ -2,7 +2,7 @@
     <div class="layout">
         <Menu />
         <main class="right">
-            <router-view>Loading...</router-view>
+            <router-view></router-view>
             <Footer />
         </main>
     </div>

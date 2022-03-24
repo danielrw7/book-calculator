@@ -1,7 +1,7 @@
 // https://github.com/danielrw7/htmlToCanvas.js
 
 export default function (html, defs, width, height) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const xmlns = 'http://www.w3.org/2000/svg'
         const $svg = document.createElement('svg')
         $svg.setAttribute('xmlns', xmlns)
