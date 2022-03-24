@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-300 0 1400 400" enable-background="new -300 0 1400 400" xml:space="preserve">
+<g>
+	<g>
+		<rect x="922.5" y="0.2" fill="#2196F3" width="20.3" height="401"/>
+		<rect x="1070.5" y="0.2" fill="#2196F3" width="20.3" height="401"/>
+		<path fill="#FFFFFF" d="M1006.7,24.6c-22.4,0-43.9-4-63.8-11.3v379.5c19.9-7.3,41.4-11.3,63.8-11.3c22.4,0,43.9,4,63.8,11.3V13.3
+			C1050.6,20.6,1029.1,24.6,1006.7,24.6z"/>
+	</g>
+	<g>
+		<rect x="697.1" y="15.6" fill="#F44336" width="102.8" height="384.5"/>
+		<g>
+			<rect x="697.1" y="346.6" fill="#EF9A9A" width="102.8" height="18"/>
+			<rect x="697.1" y="51.1" fill="#EF9A9A" width="102.8" height="18"/>
+		</g>
+		
+			<rect x="723.2" y="182.6" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 1424.6541 -174.4521)" fill="#EF9A9A" width="50.4" height="50.4"/>
+	</g>
+	<g>
+		<rect x="-289.9" y="296.7" fill="#2196F3" width="384.5" height="102.8"/>
+		<g>
+			<rect x="41.1" y="296.7" fill="#64B5F6" width="18" height="102.8"/>
+			<rect x="-254.3" y="296.7" fill="#64B5F6" width="18" height="102.8"/>
+		</g>
+		
+			<rect x="-122.8" y="322.9" transform="matrix(0.7071 0.7071 -0.7071 0.7071 217.5418 170.9794)" fill="#64B5F6" width="50.4" height="50.4"/>
+	</g>
+	<g>
+		<rect x="269.8" y="296.4" fill="#FFC107" width="384.5" height="102.8"/>
+		<g>
+			<rect x="600.8" y="296.4" fill="#FFE082" width="18" height="102.8"/>
+			<rect x="305.4" y="296.4" fill="#FFE082" width="18" height="102.8"/>
+		</g>
+		
+			<rect x="436.9" y="322.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 381.2281 -224.8913)" fill="#FFE082" width="50.4" height="50.4"/>
+	</g>
+	<g>
+		<rect x="342" y="228.3" fill="#388E3C" width="283.7" height="68.4"/>
+		<rect x="359.4" y="245.9" fill="#4CAF50" width="249" height="33"/>
+	</g>
+	<g>
+		<rect x="827.5" y="116.9" fill="#388E3C" width="68.4" height="283.7"/>
+		<rect x="845.2" y="134.2" fill="#4CAF50" width="33" height="249"/>
+	</g>
+	<g>
+		<rect x="-232" y="228.3" fill="#F44336" width="283.7" height="68.4"/>
+		<rect x="-214.6" y="246" fill="#EF9A9A" width="249" height="33"/>
+	</g>
+</g>
+</svg>
